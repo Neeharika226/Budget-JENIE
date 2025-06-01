@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login - Budget Bliss</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" required />
+
+      <button type="submit">Login</button>
+    </form>
+    <p id="loginMessage"></p>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Grab values (no validation needed, any values accepted)
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (username && password) {
+        // Show success message
+        document.getElementById('loginMessage').style.color = 'green';
+        document.getElementById('loginMessage').textContent = 'Login successful! Redirecting...';
+
+        // Redirect to index.html after short delay
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 1000);
+      } else {
+        // If empty somehow
+        document.getElementById('loginMessage').style.color = 'red';
+        document.getElementById('loginMessage').textContent = 'Please enter username and password.';
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Income</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f9f9f9;
+    }
+    form {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, button {
+      display: block;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center;">Add Income</h2>
+  <form id="incomeForm">
+    <input type="text" id="incomeTitle" placeholder="Title" required />
+    <input type="number" id="incomeAmount" placeholder="Amount" required />
+    <input type="date" id="incomeDate" required />
+    <button type="submit">Add Income</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
